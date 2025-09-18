@@ -115,7 +115,6 @@ public class EnrollmentsServlet extends HttpServlet {
                     ps.executeUpdate();
                 }
             }
-            // no update logic because PK can't be changed
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

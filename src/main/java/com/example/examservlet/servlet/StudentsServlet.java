@@ -140,7 +140,6 @@ public class StudentsServlet extends HttpServlet {
 
         try (Connection conn = DbUtil.getConnection()) {
             if (isStudentExisting(conn, studentCodeParam)) {
-                // Update existing
                 try (PreparedStatement ps = conn.prepareStatement(
                         "UPDATE students SET first_name=?, last_name=?, field_name=? WHERE student_code=?")) {
                     ps.setString(1, firstName);
@@ -150,7 +149,6 @@ public class StudentsServlet extends HttpServlet {
                     ps.executeUpdate();
                 }
             } else {
-                // Insert new
                 try (PreparedStatement ps = conn.prepareStatement(
                         "INSERT INTO students (student_code, first_name, last_name, field_name) VALUES (?, ?, ?, ?)")) {
                     ps.setLong(1, Long.parseLong(studentCodeParam));
