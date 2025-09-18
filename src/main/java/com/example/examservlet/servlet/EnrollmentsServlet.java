@@ -52,7 +52,6 @@ public class EnrollmentsServlet extends HttpServlet {
                         + "<a href='enrollments?action=delete&student_code=" + studentCode + "&course_id=" + courseId + "' onclick='return confirm(\"Are you sure?\")'>Delete</a></td></tr>");
             }
 
-            out.println("</table><br><a href='/'>Back</a></body></html>");
 
         } catch (SQLException e) {
             throw new RuntimeException(e);

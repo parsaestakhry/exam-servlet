@@ -53,7 +53,6 @@ public class OptionsServlet extends HttpServlet {
                         + "<a href='options?action=delete&option_id=" + id + "' onclick='return confirm(\"Are you sure?\")'>Delete</a></td></tr>");
             }
 
-            out.println("</table><br><a href='/'>Back</a></body></html>");
 
         } catch (SQLException e) {
             throw new RuntimeException(e);

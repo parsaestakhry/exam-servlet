@@ -55,7 +55,6 @@ public class StudentExamsServlet extends HttpServlet {
                         + "<a href='studentexams?action=delete&student_exam_id=" + id + "' onclick='return confirm(\"Are you sure?\")'>Delete</a></td></tr>");
             }
 
-            out.println("</table><br><a href='/'>Back</a></body></html>");
 
         } catch (SQLException e) {
             throw new RuntimeException(e);

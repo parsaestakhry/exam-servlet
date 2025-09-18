@@ -63,7 +63,6 @@ public class StudentsServlet extends HttpServlet {
             }
 
             out.println("</table>");
-            out.println("<br><a href='/'>Back to Home</a>");
             out.println("</body></html>");
 
         } catch (SQLException e) {
